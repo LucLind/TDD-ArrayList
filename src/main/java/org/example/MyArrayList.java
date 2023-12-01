@@ -36,11 +36,7 @@ public class MyArrayList {
     }
 
     public int[] getArray(){
-        int[] output = new int[length];
-        for (int i = 0; i < length; i++){
-            output[i] = array[i];
-        }
-        return output;
+        return createShortenedArray();
     }
 
     public int size(){
@@ -53,5 +49,17 @@ public class MyArrayList {
             newArray[i] = array[i];
         }
         array = newArray;
+    }
+
+    /**
+     * creates an array thats as long as the length property.
+     * @return
+     */
+    private int[] createShortenedArray(){
+        int[] output = new int[length];
+        for (int i = 0; i < length; i++){
+            output[i] = array[i];
+        }
+        return output;
     }
 }
